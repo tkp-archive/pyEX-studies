@@ -32,3 +32,7 @@ class TestAPI:
     def test_sar(self):
         from pyEXstudies import sar
         sar(C)
+
+    def test_rsi(self):
+        from pyEXstudies import rsi
+        rsi(C)

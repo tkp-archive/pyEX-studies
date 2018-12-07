@@ -44,3 +44,9 @@ def sar(symbol, timeframe='6m', highcol='high', lowcol='low'):
     sar = t.SAR(df[highcol].values, df[lowcol].values)
 
     return pd.DataFrame({highcol: df[highcol].values, lowcol: df[lowcol].values, 'sar': sar})
+
+
+def rsi(symbol, timeframe='6m', col='close', period=14):
+    df = p.chartDF(symbol, timeframe)
+    rs = t.RSI(df[col].values, period)
+    return pd.DataFrame({col: df[col].values, 'rsi': rs})
