@@ -20,3 +20,4 @@ If you redistribute our API data:
 ### Getting Started
 
 - [Read The Docs!](https://pyEX-studies.readthedocs.io)
+- [Demo Notebook](https://github.com/timkpaine/pyEX-studies/blob/master/examples.ipynb)
