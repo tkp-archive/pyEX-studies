@@ -1,6 +1,8 @@
 import pyEX as p
+from temporalcache import expire
 
 
+# @expire(hour=16)
 def peerCorrelation(symbol, timeframe='6m'):
     peers = p.peers(symbol)
     rets = p.batchDF(peers + [symbol], 'chart', timeframe)['chart']

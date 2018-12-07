@@ -1,5 +1,5 @@
 from .peercorrelation import peerCorrelation
-from .technicals import bollinger
+from .technicals import *
 
 
 __version__ = '0.0.2'

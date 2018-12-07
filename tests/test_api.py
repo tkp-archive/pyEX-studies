@@ -1,4 +1,5 @@
 # for Coverage
+import time
 from mock import patch, MagicMock
 
 C = 'AAPL'
@@ -6,23 +7,24 @@ C = 'AAPL'
 
 class TestAPI:
     def setup(self):
-        pass
-        # setup() before each test method
+        time.sleep(1)
 
     def teardown(self):
         pass
-        # teardown() after each test method
-
-    @classmethod
-    def setup_class(cls):
-        pass
-        # setup_class() before any methods in this class
-
-    @classmethod
-    def teardown_class(cls):
-        pass
-        # teardown_class() after any methods in this class
 
     def test_peercorrelation(self):
         from pyEXstudies import peerCorrelation
         peerCorrelation(C, '6m')
+
+    def test_bollinger(self):
+        from pyEXstudies import bollinger
+        bollinger(C, '6m')
+
+    def test_sma(self):
+        from pyEXstudies import ema, sma
+        ema(C)
+        ema(C, periods=30)
+        ema(C, periods=[30, 45])
+        sma(C)
+        sma(C, periods=30)
+        sma(C, periods=[30, 45])
