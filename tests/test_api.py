@@ -20,7 +20,7 @@ class TestAPI:
         from pyEXstudies import bollinger
         bollinger(C, '6m')
 
-    def test_sma(self):
+    def test_emasma(self):
         from pyEXstudies import ema, sma
         ema(C)
         ema(C, periods=30)
@@ -28,3 +28,7 @@ class TestAPI:
         sma(C)
         sma(C, periods=30)
         sma(C, periods=[30, 45])
+
+    def test_sar(self):
+        from pyEXstudies import sar
+        sar(C)
