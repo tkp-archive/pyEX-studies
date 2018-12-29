@@ -1,5 +1,5 @@
 import pyEX as p
-from temporalcache import expire
+# from temporalcache import expire
 
 
 # @expire(hour=16)

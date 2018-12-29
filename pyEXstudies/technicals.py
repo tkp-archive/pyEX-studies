@@ -1,7 +1,7 @@
 import talib as t
 import pyEX as p
 import pandas as pd
-from temporalcache import expire
+# from temporalcache import expire
 from .utils import tolist
 
 
