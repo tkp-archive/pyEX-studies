@@ -1,8 +1,8 @@
 tests: ## Clean and Make unit tests
-	python3 -m nose2 -v tests --with-coverage --coverage=pyEXstudies
+	python3 -m pytest tests --cov=pyEXstudies
 
 test: lint ## run the tests for travis CI
-	@ python3 -m nose2 -v tests --with-coverage --coverage=pyEXstudies
+	@ python3 -m pytest tests --cov=pyEXstudies
 
 lint: ## run linter
 	pylint pyEXstudies || echo
