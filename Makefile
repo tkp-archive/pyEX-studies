@@ -1,8 +1,8 @@
 tests: ## Clean and Make unit tests
-	python3 -m pytest tests --cov=pyEXstudies
+	python3 -m pytest -v tests --cov=pyEXstudies
 
 test: lint ## run the tests for travis CI
-	@ python3 -m pytest tests --cov=pyEXstudies
+	@ python3 -m pytest -v tests --cov=pyEXstudies
 
 lint: ## run linter
 	pylint pyEXstudies || echo
