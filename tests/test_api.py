@@ -21,10 +21,13 @@ class TestAPI:
         bollinger(C, '6m')
 
     def test_emasma(self):
-        from pyEXstudies import ema, sma
+        from pyEXstudies import ema, sma, dema
         ema(C)
         ema(C, periods=30)
         ema(C, periods=[30, 45])
+        dema(C)
+        dema(C, periods=30)
+        dema(C, periods=[30, 45])
         sma(C)
         sma(C, periods=30)
         sma(C, periods=[30, 45])
