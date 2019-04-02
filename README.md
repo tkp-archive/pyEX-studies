@@ -3,7 +3,6 @@ Predefined financial metrics built on pyEX/IEX
 
 [![Build Status](https://travis-ci.org/timkpaine/pyEX-studies.svg?branch=master)](https://travis-ci.org/timkpaine/pyEX-studies)
 [![Coverage](https://codecov.io/gh/timkpaine/pyEX-studies/branch/master/graph/badge.svg)](https://codecov.io/gh/timkpaine/pyEX-studies)
-[![Waffle.io](https://badge.waffle.io/timkpaine/pyEX-studies.png?label=ready&title=Ready)](https://waffle.io/timkpaine/pyEX-studies?utm_source=badge)
 [![BCH compliance](https://bettercodehub.com/edge/badge/timkpaine/pyEX-studies?branch=master)](https://bettercodehub.com/)
 [![License](https://img.shields.io/github/license/timkpaine/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
 [![PyPI](https://img.shields.io/pypi/v/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
