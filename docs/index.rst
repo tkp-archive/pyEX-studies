@@ -8,7 +8,7 @@ pyEX-studies
 Calculations using IEX and pyEX
 
 
-|build-status| |issues| |waffle| |codecov| |bch| |pypiv| |pypil| |docs|
+|build-status| |issues| |codecov| |bch| |pypiv| |pypil| |docs|
 
 
 .. toctree::
@@ -28,11 +28,6 @@ Calculations using IEX and pyEX
     :alt: Issues
     :scale: 100%
     :target: https://img.shields.io/github/issues/timkpaine/pyEX-studies.svg
-
-.. |waffle| image:: https://badge.waffle.io/timkpaine/pyEX-studies.svg?label=ready&title=Ready
-    :alt: Waffle
-    :scale: 100%
-    :target: http://waffle.io/timkpaine/pyEX-studies
 
 .. |codecov| image:: https://codecov.io/gh/timkpaine/pyEX-studies/branch/master/graph/badge.svg
     :alt: Codecov
