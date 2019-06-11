@@ -1,21 +1,20 @@
 import talib as t
-import pyEX as p
 import pandas as pd
 from ..utils import tolist
 
 
-def bollinger(symbol, timeframe='6m', col='close', period=2):
-    df = p.chartDF(symbol, timeframe)
+def bollinger(client, symbol, timeframe='6m', col='close', period=2):
+    df = client.chartDF(symbol, timeframe)
     bb = t.BBANDS(df[col].values, period)
     return pd.DataFrame({col: df[col].values, 'upper': bb[0], 'middle': bb[1], 'lower': bb[2]})
 
 
-def dema(symbol, timeframe='6m', col='close', periods=None):
+def dema(client, symbol, timeframe='6m', col='close', periods=None):
     if periods is None:
         periods = [30]
     periods = tolist(periods)
 
-    df = p.chartDF(symbol, timeframe)
+    df = client.chartDF(symbol, timeframe)
 
     build = {col: df[col].values}
     for per in periods:
@@ -23,12 +22,12 @@ def dema(symbol, timeframe='6m', col='close', periods=None):
     return pd.DataFrame(build)
 
 
-def ema(symbol, timeframe='6m', col='close', periods=None):
+def ema(client, symbol, timeframe='6m', col='close', periods=None):
     if periods is None:
         periods = [30]
     periods = tolist(periods)
 
-    df = p.chartDF(symbol, timeframe)
+    df = client.chartDF(symbol, timeframe)
 
     build = {col: df[col].values}
     for per in periods:
@@ -36,18 +35,18 @@ def ema(symbol, timeframe='6m', col='close', periods=None):
     return pd.DataFrame(build)
 
 
-def sar(symbol, timeframe='6m', highcol='high', lowcol='low'):
-    df = p.chartDF(symbol, timeframe)
+def sar(client, symbol, timeframe='6m', highcol='high', lowcol='low'):
+    df = client.chartDF(symbol, timeframe)
     sar = t.SAR(df[highcol].values, df[lowcol].values)
     return pd.DataFrame({highcol: df[highcol].values, lowcol: df[lowcol].values, 'sar': sar})
 
 
-def sma(symbol, timeframe='6m', col='close', periods=None):
+def sma(client, symbol, timeframe='6m', col='close', periods=None):
     if periods is None:
         periods = [30]
     periods = tolist(periods)
 
-    df = p.chartDF(symbol, timeframe)
+    df = client.chartDF(symbol, timeframe)
 
     build = {col: df[col].values}
     for per in periods:
