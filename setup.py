@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 from codecs import open
 from os import path
 
@@ -11,12 +11,12 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
     requires = f.read().split()
 
 setup(
-    name='pyEX-studies',
-    version='0.0.2',
+    name='pyEX.studies',
+    version='0.0.3',
     description='Calculations using pyEX',
     long_description=long_description,
     url='https://github.com/timkpaine/pyEX-studies',
-    download_url='https://github.com/timkpaine/pyEX-studies/archive/v0.0.2.tar.gz',
+    download_url='https://github.com/timkpaine/pyEX-studies/archive/v0.0.3.tar.gz',
     author='Tim Paine',
     author_email='timothy.k.paine@gmail.com',
     license='Apache 2.0',
@@ -34,7 +34,8 @@ setup(
     ],
 
     keywords='finance data',
-    packages=find_packages(exclude=[]),
+    zip_safe=False,
+    packages=['pyEX.studies', 'pyEX.studies.technicals'],
     install_requires=requires,
     extras_require={'dev': requires + ['pytest', 'pytest-cov', 'pylint', 'flake8']}
 )
