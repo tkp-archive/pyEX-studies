@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import talib as t
 import pandas as pd
 
