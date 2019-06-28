@@ -36,6 +36,7 @@ setup(
     keywords='finance data',
     zip_safe=False,
     packages=['pyEX.studies', 'pyEX.studies.technicals'],
+    package_dir={'pyEX.studies': 'pyEX/studies'},
     install_requires=requires,
     extras_require={'dev': requires + ['pytest', 'pytest-cov', 'pylint', 'flake8']}
 )
