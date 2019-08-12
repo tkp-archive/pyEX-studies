@@ -1,29 +1,45 @@
+prebuild:  ## Copy assets from pyEX
+	cp -r ../pyEX/pyEX/* ./pyEX/
+
 tests: ## Clean and Make unit tests
-	python3 -m pytest -v tests --cov=pyEXstudies
+	python3 -m pytest -v tests --cov=pyEX.studies
 
 test: lint ## run the tests for travis CI
-	@ python3 -m pytest -v tests --cov=pyEXstudies
+	@ python3 -m pytest -v tests --cov=pyEX.studies
 
 lint: ## run linter
-	flake8 pyEXstudies
+	flake8 pyEX/studies
 
 annotate: ## MyPy type annotation check
-	mypy -s pyEXstudies
+	mypy pyEX/studies
 
 annotate_l: ## MyPy type annotation check - count only
-	mypy -s pyEXstudies | wc -l 
+	mypy pyEX/studies | wc -l 
 
 clean: ## clean the repository
 	find . -name "__pycache__" | xargs  rm -rf 
 	find . -name "*.pyc" | xargs rm -rf 
 	rm -rf .coverage cover htmlcov logs build dist *.egg-info
 	make -C ./docs clean
+	rm -rf ./docs/*.*.rst  # generated
+	rm -rf pyEX/*.py
+	rm -rf pyEX/marketdata
 
 docs:  ## make documentation
 	make -C ./docs html
+	open ./docs/_build/html/index.html
 
 install:  ## install to site-packages
 	pip3 install .
+
+micro:  ## steps before dist, defaults to previous tag + one micro
+	. scripts/deploy.sh MICRO
+
+minor:  ## steps before dist, defaults to previous tag + one micro
+	. scripts/deploy.sh MINOR
+
+major:  ## steps before dist, defaults to previous tag + one micro
+	. scripts/deploy.sh MAJOR
 
 dist:  ## dist to pypi
 	rm -rf dist build

@@ -1,2 +1,2 @@
 # for Coverage
-from pyEXstudies import *
+from pyEX.studies import *
