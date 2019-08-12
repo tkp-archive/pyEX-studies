@@ -14,15 +14,15 @@ class TestAPI:
         pass
 
     def test_peercorrelation(self):
-        from pyEXstudies import peerCorrelation
+        from pyEX.studies import peerCorrelation
         peerCorrelation(C, S, '6m')
 
     def test_bollinger(self):
-        from pyEXstudies import bollinger
+        from pyEX.studies import bollinger
         bollinger(C, S, '6m')
 
     def test_emasma(self):
-        from pyEXstudies import ema, sma, dema
+        from pyEX.studies import ema, sma, dema
         ema(C, S)
         ema(C, S, periods=30)
         ema(C, S, periods=[30, 45])
@@ -34,9 +34,9 @@ class TestAPI:
         sma(C, S, periods=[30, 45])
 
     def test_sar(self):
-        from pyEXstudies import sar
+        from pyEX.studies import sar
         sar(C, S)
 
     def test_rsi(self):
-        from pyEXstudies import rsi
+        from pyEX.studies import rsi
         rsi(C, S)
