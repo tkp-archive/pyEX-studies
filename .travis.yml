@@ -26,16 +26,11 @@ before_install:
   - tar -xvzf ta-lib-0.4.0-src.tar.gz
   - cd ta-lib/ && ./configure --prefix=/usr LDFLAGS="-lm" && make && sudo make install && cd .. && rm -r ta-lib
 
-install: 
-  - python3 -m pip install -r requirements.txt && python3 -m pip install -e .[dev]
-
-script: make test
 
 install:
-    - pip install -r requirements.txt
-    - pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
+    - python3 -m pip install -r requirements.txt && python3 -m pip install -e .[dev]
+    - python3 -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
     - git checkout pyEX/studies  # the above install clobbers source, so restore
-    - pip install -U pytest pytest-cov flake8 pylint codecov
 
 script: make test
 
