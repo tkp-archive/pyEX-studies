@@ -33,6 +33,8 @@ script: make test
 
 install:
     - pip install -r requirements.txt
+    - pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
+    - git checkout pyEX/studies  # the above install clobbers source, so restore
     - pip install -U pytest pytest-cov flake8 pylint codecov
 
 script: make test

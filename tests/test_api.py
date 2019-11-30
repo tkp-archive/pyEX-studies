@@ -1,28 +1,25 @@
 # for Coverage
 import time
 from mock import patch, MagicMock
+import pandas as pd
 
 C = MagicMock()
 S = 'AAPL'
 
+C.chartDF.return_value = pd.DataFrame({'open': [1., 2., 3., 4.], 'close': [1., 2., 3., 4.], 'high': [1., 2., 3., 4.], 'low': [1., 2., 3., 4.]})
+
 
 class TestAPI:
-    def setup(self):
-        time.sleep(1)
-
-    def teardown(self):
-        pass
-
     def test_peercorrelation(self):
-        from pyEXstudies import peerCorrelation
+        from pyEX.studies import peerCorrelation
         peerCorrelation(C, S, '6m')
 
     def test_bollinger(self):
-        from pyEXstudies import bollinger
+        from pyEX.studies import bollinger
         bollinger(C, S, '6m')
 
     def test_emasma(self):
-        from pyEXstudies import ema, sma, dema
+        from pyEX.studies import ema, sma, dema
         ema(C, S)
         ema(C, S, periods=30)
         ema(C, S, periods=[30, 45])
@@ -34,9 +31,9 @@ class TestAPI:
         sma(C, S, periods=[30, 45])
 
     def test_sar(self):
-        from pyEXstudies import sar
+        from pyEX.studies import sar
         sar(C, S)
 
     def test_rsi(self):
-        from pyEXstudies import rsi
+        from pyEX.studies import rsi
         rsi(C, S)

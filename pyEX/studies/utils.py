@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 def tolist(val):
     try:
         iter(val)
