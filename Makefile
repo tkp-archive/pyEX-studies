@@ -10,6 +10,9 @@ test: lint ## run the tests for travis CI
 lint: ## run linter
 	flake8 pyEX/studies
 
+fix:  ## run autopep8/tslint fix
+	autopep8 --in-place -r -a -a pyEX/studies/
+
 annotate: ## MyPy type annotation check
 	mypy pyEX/studies
 
