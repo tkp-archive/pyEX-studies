@@ -1,9 +1,19 @@
 # -*- coding: utf-8 -*-
-# from temporalcache import expire
 
 
-# @expire(hour=16)
 def peerCorrelation(client, symbol, timeframe='6m'):
+    '''This will return a dataframe of peer correlations for the given symbol across
+    the given timeframe
+
+    Args:
+        client (pyEX.Client); Client
+        symbol (string); Ticker
+        timeframe (string); timeframe to use, for pyEX.chart
+
+    Returns:
+        DataFrame: result
+    '''
+
     peers = client.peers(symbol)
     rets = client.batchDF(peers + [symbol], 'chart', timeframe)['chart']
     ret = rets.pivot(columns='symbol', values='changePercent').corr()
