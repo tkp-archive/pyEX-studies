@@ -13,7 +13,6 @@ def peerCorrelation(client, symbol, timeframe='6m'):
     Returns:
         DataFrame: result
     '''
-
     peers = client.peers(symbol)
     rets = client.batchDF(peers + [symbol], 'chart', timeframe)['chart']
     ret = rets.pivot(columns='symbol', values='changePercent').corr()
