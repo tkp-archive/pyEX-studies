@@ -6,7 +6,7 @@ API
 
 Peer Correlation
 --------------------------------
-.. automodule:: pyEX.studies.alternative
+.. automodule:: pyEX.studies.peercorrelation
     :members:
     :noindex:
 

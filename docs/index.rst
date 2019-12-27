@@ -1,14 +1,10 @@
-.. pyEX-studies documentation master file, created by
-   sphinx-quickstart on Fri Jan 12 22:07:11 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 pyEX-studies
-===================================
-Calculations using IEX and pyEX
+============
+
+Predefined financial metrics built on pyEX/IEX
 
 
-|build-status| |issues| |codecov| |bch| |pypiv| |pypil| |docs|
+|Build Status| |Coverage| |BCH compliance| |License| |PyPI| |Docs|
 
 
 .. toctree::
@@ -19,37 +15,30 @@ Calculations using IEX and pyEX
    api
 
 
-.. |build-status| image:: https://travis-ci.org/timkpaine/pyEX-studies.svg?branch=master
-    :alt: Build Status
-    :scale: 100%
-    :target: https://travis-ci.org/timkpaine/pyEX-studies
+Referral
+--------
 
-.. |issues| image:: https://img.shields.io/github/issues/timkpaine/pyEX-studies.svg
-    :alt: Issues
-    :scale: 100%
-    :target: https://img.shields.io/github/issues/timkpaine/pyEX-studies.svg
+Please subscribe to IEX Cloud using `my referral
+code <https://iexcloud.io/s/6332a3c3>`__.
 
-.. |codecov| image:: https://codecov.io/gh/timkpaine/pyEX-studies/branch/master/graph/badge.svg
-    :alt: Codecov
-    :scale: 100%
-    :target: https://codecov.io/gh/timkpaine/pyEX-studies
+Getting Started
+===============
 
-.. |bch| image:: https://bettercodehub.com/edge/badge/timkpaine/pyEX-studies?branch=master
-    :alt: BCH
-    :scale: 100%
-    :target: https://bettercodehub.com/
+All functions are bound to a ``pyEX`` client if ``pyEX-studies`` is
+installed
 
-.. |pypiv| image:: https://img.shields.io/pypi/v/pyEX-studies.svg
-    :alt: Version
-    :scale: 100%
-    :target: https://pypi.python.org/pypi/pyEX-studies
+-  `pyEX main documentation <https://pyEX.readthedocs.io>`__
+-  `pyEX-studies documentation <https://pyEX-studies.readthedocs.io>`__
 
-.. |pypil| image:: https://img.shields.io/pypi/l/pyEX-studies.svg
-    :alt: License
-    :scale: 100%
-    :target: https://pypi.python.org/pypi/pyEX-studies
-
-.. |docs| image:: https://img.shields.io/readthedocs/pyEX-studies.svg
-    :alt: Docs
-    :scale: 100%
-    :target: http://pyEX-studies.readthedocs.io/en/latest/
+.. |Build Status| image:: https://travis-ci.org/timkpaine/pyEX-studies.svg?branch=master
+   :target: https://travis-ci.org/timkpaine/pyEX-studies
+.. |Coverage| image:: https://codecov.io/gh/timkpaine/pyEX-studies/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/timkpaine/pyEX-studies
+.. |BCH compliance| image:: https://bettercodehub.com/edge/badge/timkpaine/pyEX-studies?branch=master
+   :target: https://bettercodehub.com/
+.. |License| image:: https://img.shields.io/github/license/timkpaine/pyEX-studies.svg
+   :target: https://pypi.python.org/pypi/pyEX-studies/
+.. |PyPI| image:: https://img.shields.io/pypi/v/pyEX-studies.svg
+   :target: https://pypi.python.org/pypi/pyEX-studies/
+.. |Docs| image:: https://img.shields.io/readthedocs/pyEX-studies.svg
+   :target: https://pyEX-studies.readthedocs.io

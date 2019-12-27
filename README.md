@@ -12,6 +12,7 @@ Predefined financial metrics built on pyEX/IEX
 Please subscribe to IEX Cloud using [my referral code](https://iexcloud.io/s/6332a3c3 ).
 
 # Getting Started
+All functions are bound to a `pyEX` client if `pyEX-studies` is installed
 
 - [pyEX main documentation](https://pyEX.readthedocs.io)
 - [pyEX-studies documentation](https://pyEX-studies.readthedocs.io)
