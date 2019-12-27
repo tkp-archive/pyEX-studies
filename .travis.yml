@@ -19,7 +19,6 @@ addons:
     packages:
       - python
       - graphviz
-      - python2
 
 before_install:
   - wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
@@ -28,11 +27,13 @@ before_install:
 
 
 install:
-    - python3 -m pip install -r requirements.txt && python3 -m pip install -e .[dev]
+    - python3 -m pip install -e .[dev]
     - python3 -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
     - git checkout pyEX/studies  # the above install clobbers source, so restore
 
-script: make test
+script:
+  - make lint
+  - make tests
 
 after_success:
     - codecov --token 2ae3f29d-c055-4e83-a1a9-b32526489d64

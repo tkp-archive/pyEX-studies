@@ -2,10 +2,10 @@ prebuild:  ## Copy assets from pyEX
 	cp -r ../pyEX/pyEX/* ./pyEX/
 
 tests: ## Clean and Make unit tests
-	python3 -m pytest -v tests --cov=pyEX.studies
+	python3 -m pytest -v pyEX/studies/tests --cov=pyEX
 
 test: lint ## run the tests for travis CI
-	@ python3 -m pytest -v tests --cov=pyEX.studies
+	@ python3 -m pytest -v pyEX/studies/tests --cov=pyEX
 
 lint: ## run linter
 	flake8 pyEX/studies
