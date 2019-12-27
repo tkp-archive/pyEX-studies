@@ -16,7 +16,7 @@ Calculations using IEX and pyEX
    :caption: Contents:
 
    installation
-   quickstart
+   api
 
 
 .. |build-status| image:: https://travis-ci.org/timkpaine/pyEX-studies.svg?branch=master

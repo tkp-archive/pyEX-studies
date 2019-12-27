@@ -8,15 +8,10 @@ Predefined financial metrics built on pyEX/IEX
 [![PyPI](https://img.shields.io/pypi/v/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
 [![Docs](https://img.shields.io/readthedocs/pyEX-studies.svg)](https://pyEX-studies.readthedocs.io)
 
+## Referral
+Please subscribe to IEX Cloud using [my referral code](https://iexcloud.io/s/6332a3c3 ).
 
-### Attribution
-If you redistribute our API data:
+# Getting Started
 
-- Cite IEX using the following text and link: “Data provided for free by [IEX](https://iextrading.com/developer).”
-- Provide a link to https://iextrading.com/api-exhibit-a in your terms of service.
-- Additionally, if you display our TOPS price data, cite “IEX Real-Time Price” near the price.
-
-### Getting Started
-
-- [Read The Docs!](https://pyEX-studies.readthedocs.io)
-- [Demo Notebook](https://github.com/timkpaine/pyEX-studies/blob/master/examples.ipynb)
+- [pyEX main documentation](https://pyEX.readthedocs.io)
+- [pyEX-studies documentation](https://pyEX-studies.readthedocs.io)
