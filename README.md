@@ -6,7 +6,7 @@ Predefined financial metrics built on pyEX/IEX
 [![BCH compliance](https://bettercodehub.com/edge/badge/timkpaine/pyEX-studies?branch=master)](https://bettercodehub.com/)
 [![License](https://img.shields.io/github/license/timkpaine/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
 [![PyPI](https://img.shields.io/pypi/v/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
-[![Docs](https://img.shields.io/readthedocs/pyEX-studies.svg)](https://pyEX-studies.readthedocs.io)
+[![Docs](https://img.shields.io/readthedocs/pyex-studies.svg)](https://pyex-studies.readthedocs.io)
 
 ## Referral
 Please subscribe to IEX Cloud using [my referral code](https://iexcloud.io/s/6332a3c3 ).

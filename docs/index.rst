@@ -40,5 +40,5 @@ installed
    :target: https://pypi.python.org/pypi/pyEX-studies/
 .. |PyPI| image:: https://img.shields.io/pypi/v/pyEX-studies.svg
    :target: https://pypi.python.org/pypi/pyEX-studies/
-.. |Docs| image:: https://img.shields.io/readthedocs/pyEX-studies.svg
-   :target: https://pyEX-studies.readthedocs.io
+.. |Docs| image:: https://img.shields.io/readthedocs/pyex-studies.svg
+   :target: https://pyex-studies.readthedocs.io
