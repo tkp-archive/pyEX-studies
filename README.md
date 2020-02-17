@@ -9,6 +9,15 @@ Predefined financial metrics built on pyEX/IEX
 [![Docs](https://img.shields.io/readthedocs/pyEX-studies.svg)](https://pyEX-studies.readthedocs.io)
 
 
+## Install
+Install from pip
+
+`pip install pyEX.studies`
+
+or from source
+
+`python setup.py install`
+
 ### Attribution
 If you redistribute our API data:
 
