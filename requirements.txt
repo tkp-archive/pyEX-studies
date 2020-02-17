@@ -1,4 +1,0 @@
-pandas>=0.22.0
-pyEX>=0.1.10
-TA-Lib>=0.4.17
-temporal-cache>=0.0.3

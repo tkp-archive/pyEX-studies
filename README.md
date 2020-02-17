@@ -6,10 +6,12 @@ Predefined financial metrics built on pyEX/IEX
 [![BCH compliance](https://bettercodehub.com/edge/badge/timkpaine/pyEX-studies?branch=master)](https://bettercodehub.com/)
 [![License](https://img.shields.io/github/license/timkpaine/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
 [![PyPI](https://img.shields.io/pypi/v/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
-[![Docs](https://img.shields.io/readthedocs/pyEX-studies.svg)](https://pyEX-studies.readthedocs.io)
+[![Docs](https://img.shields.io/readthedocs/pyex-studies.svg)](https://pyex-studies.readthedocs.io)
 
+# Referral
+Please subscribe to IEX Cloud using [my referral code](https://iexcloud.io/s/6332a3c3 ).
 
-## Install
+# Install
 Install from pip
 
 `pip install pyEX.studies`
@@ -18,14 +20,8 @@ or from source
 
 `python setup.py install`
 
-### Attribution
-If you redistribute our API data:
+# Getting Started
+All functions are bound to a `pyEX` client if `pyEX-studies` is installed
 
-- Cite IEX using the following text and link: “Data provided for free by [IEX](https://iextrading.com/developer).”
-- Provide a link to https://iextrading.com/api-exhibit-a in your terms of service.
-- Additionally, if you display our TOPS price data, cite “IEX Real-Time Price” near the price.
-
-### Getting Started
-
-- [Read The Docs!](https://pyEX-studies.readthedocs.io)
-- [Demo Notebook](https://github.com/timkpaine/pyEX-studies/blob/master/examples.ipynb)
+- [pyEX main documentation](https://pyEX.readthedocs.io)
+- [pyEX-studies documentation](https://pyEX-studies.readthedocs.io)
