@@ -7,8 +7,17 @@ Predefined financial metrics built on pyEX/IEX
 [![PyPI](https://img.shields.io/pypi/v/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
 [![Docs](https://img.shields.io/readthedocs/pyex-studies.svg)](https://pyex-studies.readthedocs.io)
 
-## Referral
+# Referral
 Please subscribe to IEX Cloud using [my referral code](https://iexcloud.io/s/6332a3c3 ).
+
+# Install
+Install from pip
+
+`pip install pyEX.studies`
+
+or from source
+
+`python setup.py install`
 
 # Getting Started
 All functions are bound to a `pyEX` client if `pyEX-studies` is installed

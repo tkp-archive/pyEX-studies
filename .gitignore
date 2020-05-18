@@ -107,4 +107,7 @@ __pycache__
 
 pyEX/*.py
 pyEX/marketdata
-docs/api/
+
+# generated
+docs/index.md
+docs/api
