@@ -22,8 +22,7 @@ jobs:
         tar xfzv ta-lib-0.4.0-src.tar.gz
         cd ta-lib
         ./configure --prefix=/usr/local
-        make -j2
-        sudo make install
+        sudo make -j2 install
         sudo -s
         echo "include /usr/local/lib" >> /etc/ld.so.conf.d/talib.conf
       displayName: "Install system dependencies"
