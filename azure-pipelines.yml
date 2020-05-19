@@ -23,7 +23,7 @@ jobs:
         cd ta-lib
         ./configure
         make -j2
-        make install
+        sudo make install
       displayName: "Install system dependencies"
 
     - script: |
