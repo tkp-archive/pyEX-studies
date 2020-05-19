@@ -18,11 +18,20 @@ jobs:
       displayName: 'Use Python $(python.version)'
 
     - script: |
+        wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+        tar xfzv ta-lib-0.4.0-src.tar.gz
+        cd ta-lib
+        ./configure
+        make -j2
+        make install
+      displayName: "Install system dependencies"
+
+    - script: |
         python -m pip install --upgrade pip
         pip install -e .[dev]
         python -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
         git checkout pyEX/caching # the above install clobbers source, so restore
-      displayName: 'Install dependencies'
+      displayName: 'Install python dependencies'
 
     - script: |
         make lint
@@ -59,11 +68,20 @@ jobs:
       displayName: 'Use Python $(python.version)'
 
     - script: |
+        wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+        tar xfzv ta-lib-0.4.0-src.tar.gz
+        cd ta-lib
+        ./configure
+        make -j2
+        make install
+      displayName: "Install system dependencies"
+
+    - script: |
         python -m pip install --upgrade pip
         pip install -e .[dev]
         python -m pip install -U --target=`pwd` --no-deps pyEX  # install latest pyEX base
         git checkout pyEX/caching # the above install clobbers source, so restore
-      displayName: 'Install dependencies'
+      displayName: 'Install python dependencies'
 
     - script: |
         make lint

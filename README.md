@@ -1,8 +1,8 @@
 # pyEX-studies
 Predefined financial metrics built on pyEX/IEX
 
-[![Build Status](https://travis-ci.org/timkpaine/pyEX-studies.svg?branch=master)](https://travis-ci.org/timkpaine/pyEX-studies)
-[![Coverage](https://codecov.io/gh/timkpaine/pyEX-studies/branch/master/graph/badge.svg)](https://codecov.io/gh/timkpaine/pyEX-studies)
+[![Build Status](https://dev.azure.com/tpaine154/pyEX/_apis/build/status/timkpaine.pyEX-studies?branchName=master)](https://dev.azure.com/tpaine154/pyEX/_build/latest?definitionId=7&branchName=master)
+[![Coverage](https://img.shields.io/azure-devops/coverage/tpaine154/pyEX/7/master)](https://img.shields.io/azure-devops/coverage/tpaine154/pyEX/7)
 [![License](https://img.shields.io/github/license/timkpaine/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
 [![PyPI](https://img.shields.io/pypi/v/pyEX-studies.svg)](https://pypi.python.org/pypi/pyEX-studies/)
 [![Docs](https://img.shields.io/readthedocs/pyex-studies.svg)](https://pyex-studies.readthedocs.io)
