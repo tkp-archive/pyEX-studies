@@ -24,6 +24,7 @@ jobs:
         ./configure --prefix=/usr/local
         make -j2
         sudo make install
+        sudo echo "include /usr/local/lib" >> /etc/ld.so.conf
       displayName: "Install system dependencies"
 
     - script: |
