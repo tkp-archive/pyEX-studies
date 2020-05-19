@@ -43,7 +43,7 @@ def ht_dcphase(client, symbol, timeframe='6m', col='close'):
     return pd.DataFrame({col: df[col].values, 'ht_dcphase': x})
 
 
-def ht_dcperiod(client, symbol, timeframe='6m', col='close'):
+def ht_phasor(client, symbol, timeframe='6m', col='close'):
     '''This will return a dataframe of
     Hilbert Transform - Phasor Components
     for the given symbol across
@@ -63,7 +63,7 @@ def ht_dcperiod(client, symbol, timeframe='6m', col='close'):
     return pd.DataFrame({col: df[col].values, 'inphase': x, 'quadrature': y})
 
 
-def ht_dcperiod(client, symbol, timeframe='6m', col='close'):
+def ht_sine(client, symbol, timeframe='6m', col='close'):
     '''This will return a dataframe of
     Hilbert Transform - SineWave
     for the given symbol across
@@ -83,7 +83,7 @@ def ht_dcperiod(client, symbol, timeframe='6m', col='close'):
     return pd.DataFrame({col: df[col].values, 'sine': x, 'leadsine': y})
 
 
-def ht_dcperiod(client, symbol, timeframe='6m', col='close'):
+def ht_trendmode(client, symbol, timeframe='6m', col='close'):
     '''This will return a dataframe of
     Hilbert Transform - Trend vs Cycle Mode
     for the given symbol across

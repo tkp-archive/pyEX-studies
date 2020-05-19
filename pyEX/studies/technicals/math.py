@@ -174,7 +174,7 @@ def ln(client, symbol, timeframe='6m', col='close'):
     return pd.DataFrame({col: df[col].values, 'ln': x})
 
 
-def acos(client, symbol, timeframe='6m', col='close'):
+def log10(client, symbol, timeframe='6m', col='close'):
     '''This will return a dataframe of
     Vector Log10
     for the given symbol across the given timeframe
@@ -425,7 +425,7 @@ def minmax(client, symbol, timeframe='6m', col='close', period=30):
     return t.MINMAX(df[col].values, timeperiod=period)
 
 
-def minindex(client, symbol, timeframe='6m', col='close', period=30):
+def minmaxindex(client, symbol, timeframe='6m', col='close', period=30):
     '''This will return a dataframe of
     Indexes of lowest and highest values over a specified period
     for the given symbol across the given timeframe

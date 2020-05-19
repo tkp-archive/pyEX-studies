@@ -406,6 +406,7 @@ def rsi(client, symbol, timeframe='6m', col='close', period=14):
     df = client.chartDF(symbol, timeframe)
     return pd.DataFrame({col: df[col].values, 'rsi': t.RSI(df[col].values, period)})
 
+
 def stoch(client, symbol, timeframe='6m', highcol='high', lowcol='lowcol', closecol='close', fastk_period=5, slowk_period=3, slowk_matype=0, slowd_period=3, slowd_matype=0):
     '''This will return a dataframe of
     Stochastic
@@ -428,7 +429,8 @@ def stoch(client, symbol, timeframe='6m', highcol='high', lowcol='lowcol', close
         DataFrame: result
     '''
     df = client.chartDF(symbol, timeframe)
-    slowk, slowd = t.STOCH(df[highcol].values, df[lowcol].values, df[closecol].values, fastk_period=fastk_period, slowk_period=slowk_period, slowk_matype=slowk_matype, slowd_period=slowd_period, slowd_matype=slowd_matype)
+    slowk, slowd = t.STOCH(df[highcol].values, df[lowcol].values, df[closecol].values, fastk_period=fastk_period,
+                           slowk_period=slowk_period, slowk_matype=slowk_matype, slowd_period=slowd_period, slowd_matype=slowd_matype)
     return pd.DataFrame({highcol: df[highcol].values, lowcol: df[lowcol].values, closecol: df[closecol].values, 'slowk': slowk, 'slowd': slowd})
 
 
@@ -455,9 +457,8 @@ def stochf(client, symbol, timeframe='6m', highcol='high', lowcol='lowcol', clos
     '''
     df = client.chartDF(symbol, timeframe)
     fastk, fastd = t.STOCHF(df[highcol].values, df[lowcol].values, df[closecol].values, fastk_period=fastk_period,
-                           slowk_period=slowk_period, slowk_matype=slowk_matype, slowd_period=slowd_period, slowd_matype=slowd_matype)
+                            slowk_period=slowk_period, slowk_matype=slowk_matype, slowd_period=slowd_period, slowd_matype=slowd_matype)
     return pd.DataFrame({highcol: df[highcol].values, lowcol: df[lowcol].values, closecol: df[closecol].values, 'fastk': fastk, 'fastd': fastd})
-
 
 
 # STOCHRSI - Stochastic Relative Strength Index
@@ -504,6 +505,7 @@ def trix(client, symbol, timeframe='6m', col='close', period=14):
     '''
     df = client.chartDF(symbol, timeframe)
     return pd.DataFrame({col: df[col].values, 'trix': t.TRIX(df[col].values, period)})
+
 
 def ultosc(client, symbol, timeframe='6m', highcol='high', lowcol='lowcol', closecol='close', timeperiod1=7, timeperiod2=14, timeperiod3=28):
     '''This will return a dataframe of

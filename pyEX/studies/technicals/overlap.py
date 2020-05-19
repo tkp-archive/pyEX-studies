@@ -74,6 +74,7 @@ def ema(client, symbol, timeframe='6m', col='close', periods=None):
         build['ema-{}'.format(per)] = t.EMA(df[col].values, per)
     return pd.DataFrame(build)
 
+
 def ht_trendline(client, symbol, timeframe='6m', col='close'):
     '''This will return a dataframe of hilbert trendline
      for the given symbol across the given timeframe
@@ -92,6 +93,7 @@ def ht_trendline(client, symbol, timeframe='6m', col='close'):
     build = {col: df[col].values}
     build['ht-{}'.format(col)] = t.HT_TRENDLINE(df[col].values)
     return pd.DataFrame(build)
+
 
 def kama(client, symbol, timeframe='6m', col='close', timeperiod=30):
     '''This will return a dataframe of kaufman adaptive moving average
@@ -227,7 +229,20 @@ def sar(client, symbol, timeframe='6m', highcol='high', lowcol='low', accelerati
     return pd.DataFrame({highcol: df[highcol].values, lowcol: df[lowcol].values, 'sar': sar})
 
 
-def sarext(client, symbol, timeframe='6m', highcol='high', lowcol='low', startvalue=0, offsetonreverse=0, accelerationinitlong=0, accelerationlong=0, accelerationmaxlong=0, accelerationinitshort=0, accelerationshort=0, accelerationmaxshort=0):
+def sarext(
+        client,
+        symbol,
+        timeframe='6m',
+        highcol='high',
+        lowcol='low',
+        startvalue=0,
+        offsetonreverse=0,
+        accelerationinitlong=0,
+        accelerationlong=0,
+        accelerationmaxlong=0,
+        accelerationinitshort=0,
+        accelerationshort=0,
+        accelerationmaxshort=0):
     '''This will return a dataframe of parabolic sar extended
      for the given symbol across the given timeframe
 
@@ -250,7 +265,17 @@ def sarext(client, symbol, timeframe='6m', highcol='high', lowcol='low', startva
         DataFrame: result
     '''
     df = client.chartDF(symbol, timeframe)
-    sar = t.SAREXT(df[highcol].values, df[lowcol].values, startvalue=startvalue, offsetonreverse=offsetonreverse, accelerationinitlong=accelerationinitlong, accelerationlong=accelerationlong, accelerationmaxlong=accelerationmaxlong, accelerationinitshort=accelerationinitshort, accelerationshort=accelerationshort, accelerationmaxshort=accelerationmaxshort)
+    sar = t.SAREXT(
+        df[highcol].values,
+        df[lowcol].values,
+        startvalue=startvalue,
+        offsetonreverse=offsetonreverse,
+        accelerationinitlong=accelerationinitlong,
+        accelerationlong=accelerationlong,
+        accelerationmaxlong=accelerationmaxlong,
+        accelerationinitshort=accelerationinitshort,
+        accelerationshort=accelerationshort,
+        accelerationmaxshort=accelerationmaxshort)
     return pd.DataFrame({highcol: df[highcol].values, lowcol: df[lowcol].values, 'sar': sar})
 
 
