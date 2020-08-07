@@ -105,8 +105,9 @@ ENV/
 .autoversion
 __pycache__
 
-pyEX/*.py
-pyEX/marketdata
+pyEX/*
+pyEX/tests
+!pyEX/studies
 
 # generated
 docs/index.md
