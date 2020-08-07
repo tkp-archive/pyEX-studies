@@ -25,8 +25,8 @@ clean: ## clean the repository
 	rm -rf .coverage cover htmlcov logs build dist *.egg-info
 	make -C ./docs clean
 	rm -rf ./docs/*.*.rst  # generated
-	rm -rf pyEX/*.py
-	rm -rf pyEX/marketdata
+	rm -rf pyEX/*
+	git checkout pyEX/studies
 
 docs:  ## make documentation
 	make -C ./docs html
