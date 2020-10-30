@@ -1,3 +1,4 @@
+
 prebuild:  ## Copy assets from pyEX
 	cp -r ../pyEX/pyEX/* ./pyEX/
 
@@ -8,16 +9,16 @@ test: lint ## run the tests for travis CI
 	@ python3 -m pytest -v pyEX/studies/tests --cov=pyEX --junitxml=python_junit.xml --cov-report=xml --cov-branch
 
 lint: ## run linter
-	flake8 pyEX/studies
+	python3 -m flake8 pyEX/studies
 
 fix:  ## run autopep8/tslint fix
-	autopep8 --in-place -r -a -a pyEX/studies/
+	python3 -m autopep8 --in-place -r -a -a pyEX/studies/
 
 annotate: ## MyPy type annotation check
-	mypy pyEX/studies
+	python3 -m mypy pyEX/studies
 
 annotate_l: ## MyPy type annotation check - count only
-	mypy pyEX/studies | wc -l 
+	python3 -m mypy pyEX/studies | wc -l 
 
 clean: ## clean the repository
 	find . -name "__pycache__" | xargs  rm -rf 
@@ -33,13 +34,13 @@ docs:  ## make documentation
 	open ./docs/_build/html/index.html
 
 install:  ## install to site-packages
-	pip3 install .
+	python3 -m pip install .
 
 dist:  ## dist to pypi
 	rm -rf dist build
 	python3 setup.py sdist
 	python3 setup.py bdist_wheel
-	twine check dist/* && twine upload dist/*
+	python3 -m twine check dist/* && twine upload dist/*
 
 # Thanks to Francoise at marmelab.com for this
 .DEFAULT_GOAL := help

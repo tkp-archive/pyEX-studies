@@ -27,7 +27,7 @@ requires = [
     'temporal-cache>=0.0.3',
 ]
 
-if not os.environ['READTHEDOCS']:
+if not os.environ.get('READTHEDOCS'):
     requires.append('TA-Lib>=0.4.17')
 
 requires_dev = [
