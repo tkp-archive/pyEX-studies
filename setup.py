@@ -24,9 +24,11 @@ with open(pjoin(here, 'README.md'), encoding='utf-8') as f:
 requires = [
     'pandas>=0.22.0',
     'pyEX>=0.1.10',
-    'TA-Lib>=0.4.17',
     'temporal-cache>=0.0.3',
 ]
+
+if not os.environ['READTHEDOCS']:
+    requires.append('TA-Lib>=0.4.17')
 
 requires_dev = [
     'flake8>=3.7.8',

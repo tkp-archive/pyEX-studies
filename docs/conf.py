@@ -25,6 +25,7 @@ import sphinx_rtd_theme
 from recommonmark.transform import AutoStructify
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+autodoc_mock_imports = ['talib']
 
 # -- General configuration ------------------------------------------------
 
